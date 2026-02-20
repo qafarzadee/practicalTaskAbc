@@ -7,9 +7,11 @@ struct PlaceRow: View {
     let item: PlaceItem
     let imgName: String
 
+    @StateObject private var loader = ImageLoader()
+
     var body: some View {
         HStack(spacing: 12) {
-            if let img = UIImage(named: imgName) {
+            if let img = loader.image {
                 Image(uiImage: img)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -36,5 +38,6 @@ struct PlaceRow: View {
         .padding(10)
         .background(Color(red: 0.86, green: 0.91, blue: 0.86))
         .cornerRadius(12)
+        .onAppear { loader.load(from: item.imageURL) }
     }
 }
