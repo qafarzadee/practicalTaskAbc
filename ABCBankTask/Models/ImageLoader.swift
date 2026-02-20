@@ -15,7 +15,9 @@ class ImageLoader: ObservableObject {
             return
         }
         guard let realURL = URL(string: url) else { return }
-        URLSession.shared.dataTask(with: realURL) { [weak self] data, _, _ in
+        var req = URLRequest(url: realURL)
+        req.setValue("ABCBankTask/1.0", forHTTPHeaderField: "User-Agent")
+        URLSession.shared.dataTask(with: req) { [weak self] data, _, _ in
             guard let data = data, let img = UIImage(data: data) else { return }
             Self.cache.setObject(img, forKey: key)
             DispatchQueue.main.async { self?.image = img }
