@@ -17,7 +17,9 @@ class ImageLoader {
             completion(nil)
             return
         }
-        URLSession.shared.dataTask(with: realURL) { [weak self] data, _, _ in
+        var req = URLRequest(url: realURL)
+        req.setValue("ABCBankTask/1.0", forHTTPHeaderField: "User-Agent")
+        URLSession.shared.dataTask(with: req) { [weak self] data, _, _ in
             guard let data = data, let img = UIImage(data: data) else {
                 DispatchQueue.main.async { completion(nil) }
                 return
