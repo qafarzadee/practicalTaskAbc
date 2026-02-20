@@ -1,9 +1,5 @@
-//
 //  ABCBankTaskApp.swift
-//  ABCBankTask
-//
 //  Created by Elgun Gafarzada on 20.02.26.
-//
 
 import SwiftUI
 
