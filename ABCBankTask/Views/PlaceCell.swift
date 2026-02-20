@@ -38,6 +38,8 @@ class PlaceCell: UITableViewCell {
         return v
     }()
 
+    private var currentURL: String?
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
@@ -73,9 +75,25 @@ class PlaceCell: UITableViewCell {
 
     required init?(coder: NSCoder) { fatalError() }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbView.image = nil
+        currentURL = nil
+    }
+
     func configure(item: PlaceItem, imageName: String) {
         titleLbl.text = item.title
         subtitleLbl.text = item.subtitle
-        thumbView.image = UIImage(named: imageName) ?? UIImage(systemName: "photo.fill")
+        thumbView.image = UIImage(systemName: "photo.fill")
+        thumbView.tintColor = .systemGray3
+
+        let url = item.imageURL
+        currentURL = url
+        ImageLoader.shared.load(url: url) { [weak self] img in
+            guard self?.currentURL == url else { return }
+            if let img = img {
+                self?.thumbView.image = img
+            }
+        }
     }
 }
