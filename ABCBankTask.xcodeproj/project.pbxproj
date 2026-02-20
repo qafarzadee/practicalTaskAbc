@@ -10,9 +10,22 @@
 		F5A153E92F487FB4001172B0 /* ABCBankTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABCBankTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F5A153FF2F48800A001172B0 /* Exceptions for "ABCBankTask" folder in "ABCBankTask" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F5A153E82F487FB4001172B0 /* ABCBankTask */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F5A153EB2F487FB4001172B0 /* ABCBankTask */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F5A153FF2F48800A001172B0 /* Exceptions for "ABCBankTask" folder in "ABCBankTask" target */,
+			);
 			path = ABCBankTask;
 			sourceTree = "<group>";
 		};
