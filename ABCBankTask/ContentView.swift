@@ -8,7 +8,7 @@ struct ContentView: View {
     @State private var searchText = ""
     @State private var showingStats = false
 
-    private let pages = galleryPages
+    private let pages = loadGalleryPages()
 
     private var filtered: [PlaceItem] {
         let list = pages[currentPage].items
