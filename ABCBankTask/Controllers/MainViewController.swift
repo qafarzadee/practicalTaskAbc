@@ -5,7 +5,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    private let pages = galleryPages
+    private let pages = loadGalleryPages()
     private var currentPage = 0
     private var searchQuery = ""
 
