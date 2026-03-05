@@ -7,7 +7,7 @@ import SwiftUI
 struct ABCBankTaskApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		F5B154012F487FB6001172B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5A153E12F487FB4001172B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5A153E82F487FB4001172B0;
+			remoteInfo = ABCBankTask;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F5A153E92F487FB4001172B0 /* ABCBankTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABCBankTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5B154022F487FB6001172B0 /* ABCBankTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABCBankTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = ABCBankTask;
 			sourceTree = "<group>";
 		};
+		F5B154032F487FB6001172B0 /* ABCBankTaskTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ABCBankTaskTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F5A153E62F487FB4001172B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B154042F487FB6001172B0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				F5A153EB2F487FB4001172B0 /* ABCBankTask */,
+				F5B154032F487FB6001172B0 /* ABCBankTaskTests */,
 				F5A153EA2F487FB4001172B0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				F5A153E92F487FB4001172B0 /* ABCBankTask.app */,
+				F5B154022F487FB6001172B0 /* ABCBankTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = F5A153E92F487FB4001172B0 /* ABCBankTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F5B154062F487FB6001172B0 /* ABCBankTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5B154092F487FB6001172B0 /* Build configuration list for PBXNativeTarget "ABCBankTaskTests" */;
+			buildPhases = (
+				F5B154052F487FB6001172B0 /* Sources */,
+				F5B154042F487FB6001172B0 /* Frameworks */,
+				F5B1540C2F487FB6001172B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5B1540B2F487FB6001172B0 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F5B154032F487FB6001172B0 /* ABCBankTaskTests */,
+			);
+			name = ABCBankTaskTests;
+			packageProductDependencies = (
+			);
+			productName = ABCBankTaskTests;
+			productReference = F5B154022F487FB6001172B0 /* ABCBankTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					F5A153E82F487FB4001172B0 = {
 						CreatedOnToolsVersion = 26.2;
+					};
+					F5B154062F487FB6001172B0 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = F5A153E82F487FB4001172B0;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				F5A153E82F487FB4001172B0 /* ABCBankTask */,
+				F5B154062F487FB6001172B0 /* ABCBankTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F5A153E72F487FB4001172B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5B1540C2F487FB6001172B0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5B154052F487FB6001172B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F5B1540B2F487FB6001172B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5A153E82F487FB4001172B0 /* ABCBankTask */;
+			targetProxy = F5B154012F487FB6001172B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F5A153F22F487FB6001172B0 /* Debug */ = {
@@ -298,6 +373,42 @@
 			};
 			name = Release;
 		};
+		F5B154072F487FB6001172B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elgungafarzada.ABCBankTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABCBankTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABCBankTask";
+			};
+			name = Debug;
+		};
+		F5B154082F487FB6001172B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elgungafarzada.ABCBankTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ABCBankTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ABCBankTask";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +426,15 @@
 			buildConfigurations = (
 				F5A153F52F487FB6001172B0 /* Debug */,
 				F5A153F62F487FB6001172B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5B154092F487FB6001172B0 /* Build configuration list for PBXNativeTarget "ABCBankTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5B154072F487FB6001172B0 /* Debug */,
+				F5B154082F487FB6001172B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

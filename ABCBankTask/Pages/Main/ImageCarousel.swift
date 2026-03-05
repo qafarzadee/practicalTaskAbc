@@ -10,18 +10,18 @@ struct ImageCarousel: View {
     var body: some View {
         VStack(spacing: 6) {
             TabView(selection: $currentPage) {
-                ForEach(pages.indices, id: \.self) { idx in
-                    carouselImage(pages[idx].imageName)
-                        .tag(idx)
+                ForEach(pages.indices, id: \.self) { index in
+                    carouselImage(pages[index].imageName)
+                        .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 220)
+            .frame(height: AppConstants.Layout.carouselHeight)
 
             HStack(spacing: 7) {
-                ForEach(pages.indices, id: \.self) { i in
+                ForEach(pages.indices, id: \.self) { index in
                     Circle()
-                        .fill(i == currentPage ? Color(.darkGray) : Color(.systemGray4))
+                        .fill(index == currentPage ? Color(.darkGray) : Color(.systemGray4))
                         .frame(width: 8, height: 8)
                 }
             }
@@ -34,20 +34,20 @@ struct ImageCarousel: View {
             Image(name)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 220)
+                .frame(height: AppConstants.Layout.carouselHeight)
                 .clipped()
-                .cornerRadius(14)
-                .padding(.horizontal, 16)
+                .cornerRadius(AppConstants.Layout.carouselCornerRadius)
+                .padding(.horizontal, AppConstants.Layout.horizontalPadding)
         } else {
             ZStack {
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: AppConstants.Layout.carouselCornerRadius)
                     .fill(Color(.systemGray5))
-                Image(systemName: "photo.fill")
+                Image(systemName: AppConstants.Images.placeholder)
                     .font(.system(size: 40))
                     .foregroundColor(.gray)
             }
-            .frame(height: 220)
-            .padding(.horizontal, 16)
+            .frame(height: AppConstants.Layout.carouselHeight)
+            .padding(.horizontal, AppConstants.Layout.horizontalPadding)
         }
     }
 }
